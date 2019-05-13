@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tech Plus - Bootstrap</title>
+
+    <link href="scss/main.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="d-flex flex-nowrap justify-content-between align-items-center">
+                <h1 class="logo"><a href="#" title="Página Inicial"><img src="images/logo.png" alt="Logo Tech Plus"></a></h1>
+                <form action="form-inline" class="search">
+                    <input class="form-control" type="text" placeholder="Digite sua busca aqui.." aria-label="Buscar">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+                <div class="links">
+                    <a href="#" class="top-link" title="Entre ou Cadastre-se">Entre ou Cadastre-se</a>
+                    <a href="#" class="top-link" title="Ver Meus Pedidos">Meus Pedidos</a>
+                </div>
+                <div id="cart" class="dropdown">
+                    <div data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="cart-total">6 item(s) - R$ 1.500,00</span>
+                        <a href="#" title="Carrinho"><i class="fa fa-shopping-cart"></i></a>
+                    </div>
+
+                    <div class="dropdown-menu">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><img src="thumb-p.jpg" alt="Miniatura do produto"></td>
+                                    <td>Produto do tipo 1</td>
+                                    <td>1</td>
+                                    <td>R$ 450,00</td>
+                                    <td><a href="" title="Remover produto">X</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="thumb-p.jpg" alt="Miniatura do produto"></td>
+                                    <td>Produto do tipo 2</td>
+                                    <td>2</td>
+                                    <td>R$ 120,00</td>
+                                    <td><a href="" title="Remover produto">X</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="menu">
+            <div class="container">
+                <nav class="navigation">
+                    <ul class="nav d-flex justify-content-between">
+                        <li class="nav-item dropdown">
+                            <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Compre por categoria</a>
+                            <ul id="drop-nvl1" class="dropdown-menu">
+                                <li class="dropdown-item"><a href="" class="dropdown-link" title="Eletrônicos">Eletrônicos</a></li>
+                                <li class="dropdown-item dropdown-submenu">
+                                    <a href="javascript:void(0)" title="Celular e Telefone" data-toggle="dropdown" aria-haspopup="true" class="dropdown-toggle dropdown-link">Celular e Telefone</a>
+                                    <div id="drop-nvl2" class="dropdown-menu">    
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <h2 class="cat-tit">Celulares</h2>
+                                                <div class="d-flex">
+                                                    <div class="col-sm-6">
+                                                        <strong>Marcas em destaque</strong>
+                                                        <ul class="">
+                                                            <li class="dropdown-item"><a href="" class="list-link">Zenfone</a></li>
+                                                            <li class="dropdown-item"><a href="" class="list-link">Samsung</a></li>
+                                                            <li class="dropdown-item"><a href="" class="list-link">Asus</a></li>
+                                                            <li class="dropdown-item"><a href="" class="list-link">Motorola</a></li>
+                                                            <li class="dropdown-item"><a href="" class="list-link">Apple</a></li>
+                                                            <li class="dropdown-item"><a href="" class="list-link">Sony</a></li>
+                                                            <li class="dropdown-item"><a href="" class="list-link">LG</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <strong>Modelos mais buscados</strong>
+                                                        <ul>
+                                                            <li class="dropdown-item"><a href="" class="list-link">Iphone 7</a></li>
+                                                            <li class="dropdown-item"><a href="" class="list-link">Galaxy J7</a></li>
+                                                            <li class="dropdown-item"><a href="" class="list-link">Galaxy J5</a></li>
+                                                            <li class="dropdown-item"><a href="" class="list-link">Galaxy S8</a></li>
+                                                            <li class="dropdown-item"><a href="" class="list-link">LG K</a></li>
+                                                            <li class="dropdown-item"><a href="" class="list-link">Zenfone 4</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6"><a href="" title="Banner em destaque"><img src="images/prod-banner.png" alt="" class="img-fluid"></a></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown-item"><a href="" class="dropdown-link" title="Presentes">Presentes</a></li>
+                                <li class="dropdown-item"><a href="" class="dropdown-link" title="Casa e Jardim">Casa e Jardim</a></li>
+                                <li class="dropdown-item"><a href="" class="dropdown-link" title="Esporte e Lazer">Esporte e Lazer</a></li>
+                                <li class="dropdown-item"><a href="" class="dropdown-link" title="Automação">Automação</a></li>
+                                <li class="dropdown-item"><a href="" class="dropdown-link" title="Ferramentas">Ferramentas</a></li>
+                                <li class="dropdown-item"><a href="" class="dropdown-link" title="Eletroportáteis">Eletroportáteis</a></li>
+                                <li class="dropdown-item"><a href="" class="dropdown-link" title="Vídeo e Som">Vídeo e Som</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="" class="nav-link">Hardware</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Smartphones</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Periféricos</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Computadores</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Placas de Vídeo</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Monitores</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Teclados e Mouses</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <script src="js/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom-script.js"></script>
+    
+</body>
+</html>
