@@ -2,11 +2,108 @@ $cl1: #0D52D6;
 $cl2: #F2B705;
 $cl3: #333;
 $cl4: #FFF;
+$cltxt: #747474;
 
 .header{ 
     background: #f6f6f6;
     padding-top: 30px;
 }
+
+#main-search{ 
+    width: 350px;
+    position: relative;
+
+    .form-control{
+        padding-right: 60px;
+        height: 50px;
+        border:1px solid #DFE7F6;
+        &:focus{
+            box-shadow: none;
+            border-color: $cl1;
+        }
+    }
+
+    .btn{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50px;
+        height: 50px;
+        background: $cl1 url('../images/icons.svg') 0 10px no-repeat;
+        font-size: 0;
+    }
+}
+
+.top-link{
+    padding-top: 35px;
+    position: relative;
+    color: $cltxt;
+    font: 1rem 'Lato',sans-serif;
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: calc(50% - 15px);
+        width: 30px;
+        height: 30px;
+        background: url("../images/icons.svg") -60px 0 no-repeat;
+    }
+
+    &:hover{
+        text-decoration:none;
+        color: $cl1;
+    }
+}
+.top-link:last-child{
+    &::before{ background-position: -110px 0;}
+}
+
+.cart-link{
+    color: $cltxt;
+    font: 1rem 'Lato',sans-serif;
+    &:hover{
+        text-decoration: none;
+        color: $cl1;
+        .shopping-cart{ background-color: $cl2;}
+    } 
+    
+}
+.shopping-cart{
+    width: 50px;
+    height: 50px;
+    background: $cl1 url('../images/icons.svg') -151px 10px no-repeat;
+    border-radius: .25rem;
+    margin-left: 15px;
+}
+#cart-preview{ 
+    padding: 0;
+    width: 380px;
+    right: 0;
+    left: inherit!important;
+    .table{ margin-bottom: 15px;}
+    td{ vertical-align: middle;}
+}
+#preview-rdp{
+    background: #EAEAEA;
+    padding: 15px;
+    .btn{
+        color: $cl4;
+        border-radius: 0;
+        &:hover{ box-shadow: none; }
+    }
+}
+.bt-vercart{
+    background: #088715;
+}
+
+.bt-checkout{
+    background: $cl1;
+}
+
 #menu{
     background: $cl1;
     margin-top: 40px;
@@ -57,3 +154,4 @@ $cl4: #FFF;
     border: 0;
     background: $cl4;
 }
+

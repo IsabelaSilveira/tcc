@@ -13,39 +13,46 @@
         <div class="container">
             <div class="d-flex flex-nowrap justify-content-between align-items-center">
                 <h1 class="logo"><a href="#" title="Página Inicial"><img src="images/logo.png" alt="Logo Tech Plus"></a></h1>
-                <form action="form-inline" class="search">
+
+                <form id="main-search" action="form-inline" class="search">
                     <input class="form-control" type="text" placeholder="Digite sua busca aqui.." aria-label="Buscar">
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    <button class="btn" type="submit">Buscar</button>
                 </form>
+
                 <div class="links">
                     <a href="#" class="top-link" title="Entre ou Cadastre-se">Entre ou Cadastre-se</a>
                     <a href="#" class="top-link" title="Ver Meus Pedidos">Meus Pedidos</a>
                 </div>
                 <div id="cart" class="dropdown">
-                    <div data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class="cart-total">6 item(s) - R$ 1.500,00</span>
-                        <a href="#" title="Carrinho"><i class="fa fa-shopping-cart"></i></a>
-                    </div>
+                    <a href="#" title="Carrinho" data-toggle="dropdown" aria-expanded="false" class="d-flex cart-link">
+                        <span class="cart-total align-self-center">6 item(s) - R$ 1.500,00</span>
+                        <i class="shopping-cart"></i>
+                    </a>
 
-                    <div class="dropdown-menu">
-                        <table>
+                    <div id="cart-preview" class="dropdown-menu">
+                        <table class="table">
                             <tbody>
                                 <tr>
-                                    <td><img src="thumb-p.jpg" alt="Miniatura do produto"></td>
-                                    <td>Produto do tipo 1</td>
-                                    <td>1</td>
-                                    <td>R$ 450,00</td>
-                                    <td><a href="" title="Remover produto">X</td>
+                                    <td><img src="images/thumb-p.png" alt="Miniatura do produto"></td>
+                                    <td class="text-center"><a href="#" title="Produto do tipo 1" class="preview-link">Produto do tipo 1</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">R$ 450,00</td>
+                                    <td class="text-center"><a href="" title="Remover produto">X</td>
                                 </tr>
                                 <tr>
-                                    <td><img src="thumb-p.jpg" alt="Miniatura do produto"></td>
-                                    <td>Produto do tipo 2</td>
-                                    <td>2</td>
-                                    <td>R$ 120,00</td>
-                                    <td><a href="" title="Remover produto">X</td>
+                                    <td><img src="images/thumb-p.png" alt="Miniatura do produto"></td>
+                                    <td class="text-center"><a href="#" title="Produto do tipo 2" class="preview-link">Produto do tipo 2</td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">R$ 120,00</td>
+                                    <td class="text-center"><a href="" title="Remover produto">X</td>
                                 </tr>
                             </tbody>
                         </table>
+
+                        <div id="preview-rdp" class="d-flex justify-content-between">
+                            <a href="#" class="btn bt-vercart" title="Ver Carrinho">Ver Carrinho</a>
+                            <a href="#" class="btn bt-checkout" title="Finalizar Compras">Finalizar</a>
+                        </div> 
                     </div>
                 </div>
             </div>
