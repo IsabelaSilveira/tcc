@@ -7,9 +7,11 @@
     <title>Tech Plus - Bootstrap</title>
 
     <link href="scss/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <header class="header">
+    <header id="header" class="header">
         <div class="container">
             <div class="d-flex flex-nowrap justify-content-between align-items-center">
                 <h1 class="logo"><a href="#" title="Página Inicial"><img src="images/logo.png" alt="Logo Tech Plus"></a></h1>
@@ -20,9 +22,10 @@
                 </form>
 
                 <div class="links">
-                    <a href="#" class="top-link" title="Entre ou Cadastre-se">Entre ou Cadastre-se</a>
+                    <a href="javascript:void(0)" class="top-link" title="Entre ou Cadastre-se" data-toggle="modal" data-target="#modalLogin">Entre ou Cadastre-se</a>
                     <a href="#" class="top-link" title="Ver Meus Pedidos">Meus Pedidos</a>
                 </div>
+
                 <div id="cart" class="dropdown">
                     <a href="#" title="Carrinho" data-toggle="dropdown" aria-expanded="false" class="d-flex cart-link">
                         <span class="cart-total align-self-center">6 item(s) - R$ 1.500,00</span>
@@ -73,29 +76,34 @@
                                         <div class="row">
                                             <div class="col-sm-6">
                                                 <h2 class="cat-tit">Celulares</h2>
-                                                <div class="d-flex">
+                                                <div class="row">
                                                     <div class="col-sm-6">
+                                                        <div class="padd">
                                                         <strong>Marcas em destaque</strong>
-                                                        <ul class="">
-                                                            <li class="dropdown-item"><a href="" class="list-link">Zenfone</a></li>
-                                                            <li class="dropdown-item"><a href="" class="list-link">Samsung</a></li>
-                                                            <li class="dropdown-item"><a href="" class="list-link">Asus</a></li>
-                                                            <li class="dropdown-item"><a href="" class="list-link">Motorola</a></li>
-                                                            <li class="dropdown-item"><a href="" class="list-link">Apple</a></li>
-                                                            <li class="dropdown-item"><a href="" class="list-link">Sony</a></li>
-                                                            <li class="dropdown-item"><a href="" class="list-link">LG</a></li>
+                                                        <ul class="list-unstyled">
+                                                            <li class="dropdown-item"><a href="" class="list-link">Produto 1</a></li>
+                                                            <li class="dropdown-item"><a href="" class="list-link">Produto 2</a></li>
+                                                            <li class="dropdown-item"><a href="" class="list-link">Produto 3</a></li>
+                                                            <li class="dropdown-item"><a href="" class="list-link">Produto 4</a></li>
+                                                            <li class="dropdown-item"><a href="" class="list-link">Produto 5</a></li>
+                                                            <li class="dropdown-item"><a href="" class="list-link">Produto 6</a></li>
+                                                            <li class="dropdown-item"><a href="" class="list-link">Produto 7</a></li>
                                                         </ul>
+                                                        </div>
                                                     </div>
                                                     <div class="col-sm-6">
+                                                        <div class="padd">
                                                         <strong>Modelos mais buscados</strong>
-                                                        <ul>
-                                                            <li class="dropdown-item"><a href="" class="list-link">Iphone 7</a></li>
-                                                            <li class="dropdown-item"><a href="" class="list-link">Galaxy J7</a></li>
-                                                            <li class="dropdown-item"><a href="" class="list-link">Galaxy J5</a></li>
-                                                            <li class="dropdown-item"><a href="" class="list-link">Galaxy S8</a></li>
-                                                            <li class="dropdown-item"><a href="" class="list-link">LG K</a></li>
-                                                            <li class="dropdown-item"><a href="" class="list-link">Zenfone 4</a></li>
+                                                        <ul class="list-unstyled">
+                                                            <li class="dropdown-item"><a href="" class="list-link">Modelo 1</a></li>
+                                                            <li class="dropdown-item"><a href="" class="list-link">Modelo 2</a></li>
+                                                            <li class="dropdown-item"><a href="" class="list-link">Modelo 3</a></li>
+                                                            <li class="dropdown-item"><a href="" class="list-link">Modelo 4</a></li>
+                                                            <li class="dropdown-item"><a href="" class="list-link">Modelo 5</a></li>
+                                                            <li class="dropdown-item"><a href="" class="list-link">Modelo 6</a></li>
+                                                            <li class="dropdown-item"><a href="" class="list-link">Modelo 7</a></li>
                                                         </ul>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -125,6 +133,72 @@
         </div>
     </header>
 
+    <div id="modalLogin" class="modal fade"  tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">  
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>    
+
+        <div class="d-flex">
+
+        <div class="col-sm-6 padd border-divisor">
+        <h2 class="modal-title text-center">Já é cadastrado?</h2>
+        <p class="text-center text-muted">Então entre com seus dados de login e senha.</p>
+
+        <form action="" class="row">
+            <div class="form-group col-sm-12">
+                <label for="inptNome">Nome:</label>
+                <input type="text" id="inptNome" placeholder="Digite seu nome" class="form-control">
+            </div>
+
+            <div class="form-group col-sm-6">
+                <label for="inptEmail">E-mail</label>
+                <input type="email" id="inptEmail" aria-describedby="emailHelp" placeholder="Digite seu email" class="form-control">
+            </div>
+
+            <div class="form-group col-sm-12"><a href="#" title="Alterar senha">Esqueci minha senha</a></div>
+
+            <div class="col-sm-12"><button type="submit" class="btn btn-primary">Acessar</button></div>
+        </form>
+        </div>
+
+        <div class="col-sm-6 padd">
+        <h2 class="modal-title text-center">Ainda não é cadastrado no site?</h2>
+        <p class="text-center text-muted">Faça agora mesmo o seu cadastro, é simples e rápido!</p>
+
+        <form action="" class="row">
+            <div class="form-group col-sm-12">
+                <label for="inptEmail">E-mail</label>
+                <input type="email" id="inptEmail" aria-describedby="emailHelp" placeholder="Digite seu email" class="form-control">
+            </div>
+
+            <div class="form-group col-sm-6">
+                <label for="inptSenha">Crie sua senha:</label>
+                <input type="password" id="inptSenha" placeholder="Digite a senha" class="form-control">
+            </div>
+
+            <div class="form-group col-sm-6">
+                <label for="inptSenhaCheck">Confirme sua senha:</label>
+                <input type="password" id="inptSenhaCheck" placeholder="Digite a senha" class="form-control">
+            </div>
+
+            <div class="form-group col-sm-6">
+                <label for="inptCpf">CPF/CNPJ:</label>
+                <input type="text" id="inptCpf" placeholder="Digite seu cpf/cnpj" class="form-control">
+            </div>
+
+            <div class="col-sm-12"><button type="submit" class="btn btn-primary">Cadastrar</button></div>
+        </form>
+        </div>
+
+        </div>
+
+        </div>
+        </div>
+    </div>
+        
     <section class="banner">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -151,7 +225,7 @@
         <div class="container">
         <h2 class="sec-tit text-center">Os mais procurados em eletrônicos</h2>
         <div class="prod-list row">
-            <div class="col-sm-3">
+            <div class="col-sm-3 prod-item">
                 <div class="card">
                     <a href="" title="Smartphone Modelo X"><img src="images/prod-thumb.png" alt="" class="card-img-top"></a>
                     <div class="card-body">
@@ -167,12 +241,12 @@
                         </div>
                         <h3 class="card-title">Smartphone Modelo X 8GB Dual Chip Tela 6" Octa-Core...</h3>
                         <span class="card-price">R$ 90,00</span>
-                        <a href="javascript:void(0)" title="Adicionar ao carrinho">Add</a>
+                        <a href="javascript:void(0)" title="Adicionar ao carrinho" class="card-add">Add</a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-sm-3">
+            <div class="col-sm-3 prod-item">
                 <div class="card">
                     <a href="" title="Smartphone Modelo X"><img src="images/prod-thumb.png" alt="" class="card-img-top"></a>
                     <div class="card-body">
@@ -188,12 +262,12 @@
                         </div>
                         <h3 class="card-title">Smartphone Modelo X 8GB Dual Chip Tela 6" Octa-Core...</h3>
                         <span class="card-price">R$ 90,00</span>
-                        <a href="javascript:void(0)" title="Adicionar ao carrinho">Add</a>
+                        <a href="javascript:void(0)" title="Adicionar ao carrinho" class="card-add">Add</a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-sm-3">
+            <div class="col-sm-3 prod-item">
                 <div class="card">
                     <a href="" title="Smartphone Modelo X"><img src="images/prod-thumb.png" alt="" class="card-img-top"></a>
                     <div class="card-body">
@@ -209,12 +283,12 @@
                         </div>
                         <h3 class="card-title">Smartphone Modelo X 8GB Dual Chip Tela 6" Octa-Core...</h3>
                         <span class="card-price">R$ 90,00</span>
-                        <a href="javascript:void(0)" title="Adicionar ao carrinho">Add</a>
+                        <a href="javascript:void(0)" title="Adicionar ao carrinho" class="card-add">Add</a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-sm-3">
+            <div class="col-sm-3 prod-item">
                 <div class="card">
                     <a href="" title="Smartphone Modelo X"><img src="images/prod-thumb.png" alt="" class="card-img-top"></a>
                     <div class="card-body">
@@ -230,7 +304,7 @@
                         </div>
                         <h3 class="card-title">Smartphone Modelo X 8GB Dual Chip Tela 6" Octa-Core...</h3>
                         <span class="card-price">R$ 90,00</span>
-                        <a href="javascript:void(0)" title="Adicionar ao carrinho">Add</a>
+                        <a href="javascript:void(0)" title="Adicionar ao carrinho" class="card-add">Add</a>
                     </div>
                 </div>
             </div>
@@ -244,7 +318,7 @@
     <script src="js/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/custom-script.js"></script>
+    <script src="js/custom-script.js"></script> 
     
 </body>
 </html>
