@@ -28,33 +28,21 @@
 
                 <div id="cart" class="dropdown">
                     <a href="#" title="Carrinho" data-toggle="dropdown" aria-expanded="false" class="d-flex cart-link">
-                        <span class="cart-total align-self-center">6 item(s) - R$ 1.500,00</span>
+                        <div class="cart-total align-self-center"><span id="qtd-itens">0</span> item(s) - R$ <span id="valor-total">0</span></div>
                         <i class="shopping-cart"></i>
                     </a>
 
                     <div id="cart-preview" class="dropdown-menu">
+                        <div class="cart-overflow">
                         <table class="table">
                             <tbody>
-                                <tr class="no-gutters">
-                                    <td class="column-thumb"><img src="images/thumb-p.png" alt="Miniatura do produto"></td>
-                                    <td class="text-left column-preview"><a href="#" title="Produto do tipo 1" class="preview-link">Produto do tipo 1</td>
-                                    <td class="text-center column-qtd">1</td>
-                                    <td class="text-center column-price">R$ 450,00</td>
-                                    <td class="text-center"><a href="" title="Remover produto">X</td>
-                                </tr>
-                                <tr>
-                                    <td class="column-thumb"><img src="images/thumb-p.png" alt="Miniatura do produto"></td>
-                                    <td class="text-left column-preview"><a href="#" title="Produto do tipo 1" class="preview-link">Produto do tipo 2</td>
-                                    <td class="text-center column-qtd">2</td>
-                                    <td class="text-center column-price">R$ 120,00</td>
-                                    <td class="text-center"><a href="" title="Remover produto">X</td>
-                                </tr>
                             </tbody>
                         </table>
+                        </div>
 
                         <div id="preview-rdp" class="d-flex justify-content-between">
-                            <a href="#" class="btn bt-vercart" title="Ver Carrinho">Ver Carrinho</a>
-                            <a href="#" class="btn bt-checkout" title="Finalizar Compras">Finalizar</a>
+                            <a href="#" class="btn btn-secondary bt-vercart" title="Ver Carrinho">Ver Carrinho</a>
+                            <a href="#" class="btn btn-primary bt-checkout" title="Finalizar Compras">Finalizar a compra</a>
                         </div> 
                     </div>
                 </div>
@@ -131,6 +119,7 @@
                 </nav>
             </div>
         </div>
+        
     </header>
 
     <div id="modalLogin" class="modal fade"  tabindex="-1" role="dialog">
@@ -198,6 +187,28 @@
         </div>
         </div>
     </div>
+
+    <div id="modalNotification" class="modal"  tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+        <div class="modal-content">   
+
+        <table class="table">
+            <tbody>
+                <tr class="no-gutters">
+                    <td class="column-thumb"><img src="" alt="Miniatura do produto" id="notified-thumb" class="img-fluid"></td>
+                    <td class="text-left column-preview"><a href="#" title="" class="preview-link" id="notified-link"></a> adicionado ao <a href="" title="Carrinho">carrinho</a>.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div id="preview-rdp" class="d-flex justify-content-between">
+            <a href="#" class="btn bt-vercart" title="Ver Carrinho">Ver Carrinho</a>
+            <a href="#" class="btn btn-primary bt-checkout" title="Finalizar Compras">Finalizar</a>
+        </div> 
+
+        </div>
+        </div>
+    </div>
         
     <section class="banner">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -223,92 +234,107 @@
 
     <section class="produtos">
         <div class="container">
-        <h2 class="sec-tit text-center">Os mais procurados em eletrônicos</h2>
+        <h2 class="sec-tit text-center">Produtos mais procurados</h2>
         <div class="prod-list row">
             <div class="col-sm-3 prod-item">
-                <div class="card">
-                    <a href="" title="Smartphone Modelo X"><img src="images/prod-thumb.png" alt="" class="card-img-top"></a>
+                <div data-id="prod-1" class="card">
+                    <a href="" title="Smartphone Modelo X"><img src="images/prod-thumb.png" alt="" class="card-img-top" data-img="images/prod-thumb.png"></a>
                     <div class="card-body">
                         <div class="card-reviews">
-               
-                            <i class="icon-star star-f"></i>    
-                            <i class="icon-star star-f"></i>   
-                            <i class="icon-star star-f"></i>   
-                            <i class="icon-star star-f"></i>  
-                            <i class="icon-star star-e"></i>
-                             
-                            <span class="card-comments">(1)</span>
+                            <span class="icon-star star-f">&#9733</span>    
+                            <span class="icon-star star-f">&#9733</span>   
+                            <span class="icon-star star-f">&#9733</span>   
+                            <span class="icon-star star-f">&#9733</span>  
+                            <span class="icon-star star-f">&#9733</span>
+                            <span class="card-comments">(5)</span>
                         </div>
-                        <h3 class="card-title">Smartphone Modelo X 8GB Dual Chip Tela 6" Octa-Core...</h3>
-                        <span class="card-price">R$ 90,00</span>
-                        <a href="javascript:void(0)" title="Adicionar ao carrinho" class="card-add">Add</a>
+
+                        <h3 class="card-title" data-name='Smartphone Modelo X'>Smartphone Modelo X</h3>
+                        <span class="card-price" data-price="970,00">R$ 970,00</span>
+
+                        <div class="d-flex">
+                        <input type="number" name="quantity" value="1" min="1" max="5" class="prod-qtd">
+                        <a href="javascript:void(0)" title="Adicionar ao carrinho" class="cart-add btn btn-primary">Comprar</a>
+                        </div>
                     </div>
+                    
                 </div>
             </div>
 
             <div class="col-sm-3 prod-item">
-                <div class="card">
-                    <a href="" title="Smartphone Modelo X"><img src="images/prod-thumb.png" alt="" class="card-img-top"></a>
+                <div data-id="prod-2" class="card">
+                    <a href="" title="Smartphone Modelo X"><img src="images/prod-thumb2.png" alt="" class="card-img-top" data-img="images/prod-thumb2.png"></a>
                     <div class="card-body">
                         <div class="card-reviews">
-                
-                            <i class="icon-star star-f"></i>    
-                            <i class="icon-star star-f"></i>   
-                            <i class="icon-star star-f"></i>   
-                            <i class="icon-star star-f"></i>  
-                            <i class="icon-star star-e"></i>
-                                
-                            <span class="card-comments">(1)</span>
+                            <span class="icon-star star-f">&#9733</span>    
+                            <span class="icon-star star-f">&#9733</span>   
+                            <span class="icon-star star-f">&#9733</span>   
+                            <span class="icon-star star-e">&#9733</span>  
+                            <span class="icon-star star-e">&#9733</span>
+                            <span class="card-comments">(17)</span>
                         </div>
-                        <h3 class="card-title">Smartphone Modelo X 8GB Dual Chip Tela 6" Octa-Core...</h3>
-                        <span class="card-price">R$ 90,00</span>
-                        <a href="javascript:void(0)" title="Adicionar ao carrinho" class="card-add">Add</a>
+
+                        <h3 class="card-title" data-name='Monitor 19 polegadas'>Monitor 19 polegadas</h3>
+                        <span class="card-price" data-price="480,00">R$ 480,00</span>
+
+                        <div class="d-flex">
+                        <input type="number" name="quantity" value="1" min="1" max="5" class="prod-qtd">
+                        <a href="javascript:void(0)" title="Adicionar ao carrinho" class="cart-add btn btn-primary">Comprar</a>
+                        </div>
                     </div>
+                    
                 </div>
             </div>
 
             <div class="col-sm-3 prod-item">
-                <div class="card">
-                    <a href="" title="Smartphone Modelo X"><img src="images/prod-thumb.png" alt="" class="card-img-top"></a>
+                <div data-id="prod-3" class="card">
+                    <a href="" title="Subwoofer 5.0"><img src="images/prod-thumb3.png" alt="" class="card-img-top" data-img="images/prod-thumb3.png"></a>
                     <div class="card-body">
                         <div class="card-reviews">
-                
-                            <i class="icon-star star-f"></i>    
-                            <i class="icon-star star-f"></i>   
-                            <i class="icon-star star-f"></i>   
-                            <i class="icon-star star-f"></i>  
-                            <i class="icon-star star-e"></i>
-                                
-                            <span class="card-comments">(1)</span>
+                            <span class="icon-star star-f">&#9733</span>    
+                            <span class="icon-star star-f">&#9733</span>   
+                            <span class="icon-star star-f">&#9733</span>   
+                            <span class="icon-star star-f">&#9733</span>  
+                            <span class="icon-star star-e">&#9733</span>
+                            <span class="card-comments">(22)</span>
                         </div>
-                        <h3 class="card-title">Smartphone Modelo X 8GB Dual Chip Tela 6" Octa-Core...</h3>
-                        <span class="card-price">R$ 90,00</span>
-                        <a href="javascript:void(0)" title="Adicionar ao carrinho" class="card-add">Add</a>
+
+                        <h3 class="card-title" data-name='Subwoofer 5.0'>Subwoofer 5.0</h3>
+                        <span class="card-price" data-price="1150,00">R$ 1150,00</span>
+
+                        <div class="d-flex">
+                        <input type="number" name="quantity" value="1" min="1" max="5" class="prod-qtd">
+                        <a href="javascript:void(0)" title="Adicionar ao carrinho" class="cart-add btn btn-primary">Comprar</a>
+                        </div>
                     </div>
+                    
                 </div>
             </div>
 
             <div class="col-sm-3 prod-item">
-                <div class="card">
-                    <a href="" title="Smartphone Modelo X"><img src="images/prod-thumb.png" alt="" class="card-img-top"></a>
+                <div data-id="prod-4" class="card">
+                    <a href="" title="Smartphone Modelo X"><img src="images/prod-thumb4.png" alt="" class="card-img-top" data-img="images/prod-thumb4.png"></a>
                     <div class="card-body">
                         <div class="card-reviews">
-                
-                            <i class="icon-star star-f"></i>    
-                            <i class="icon-star star-f"></i>   
-                            <i class="icon-star star-f"></i>   
-                            <i class="icon-star star-f"></i>  
-                            <i class="icon-star star-e"></i>
-                                
+                            <span class="icon-star star-f">&#9733</span>    
+                            <span class="icon-star star-f">&#9733</span>   
+                            <span class="icon-star star-f">&#9733</span>   
+                            <span class="icon-star star-e">&#9733</span>  
+                            <span class="icon-star star-e">&#9733</span>
                             <span class="card-comments">(1)</span>
                         </div>
-                        <h3 class="card-title">Smartphone Modelo X 8GB Dual Chip Tela 6" Octa-Core...</h3>
-                        <span class="card-price">R$ 90,00</span>
-                        <a href="javascript:void(0)" title="Adicionar ao carrinho" class="card-add">Add</a>
+
+                        <h3 class="card-title" data-name='Notebook Dual Core'>Notebook Dual Core</h3>
+                        <span class="card-price" data-price="680,00">R$ 680,00</span>
+
+                        <div class="d-flex">
+                        <input type="number" name="quantity" value="1" min="1" max="5" class="prod-qtd">
+                        <a href="javascript:void(0)" title="Adicionar ao carrinho" class="cart-add btn btn-primary">Comprar</a>
+                        </div>
                     </div>
+                    
                 </div>
             </div>
-
         </div>
         </div>
     </section>     

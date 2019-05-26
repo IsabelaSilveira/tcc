@@ -91,6 +91,12 @@ $cllink: #696973;
     width: 380px;
     right: 0;
     left: inherit!important;
+    overflow: hidden;
+
+    .cart-overflow{
+        max-height: 220px;
+        overflow-y: scroll;
+    }
     .table{ margin-bottom: 15px;}
     td{ vertical-align: middle;}
     .column-thumb{ width: 75px;}
@@ -102,16 +108,19 @@ $cllink: #696973;
     padding: 15px;
     .btn{
         color: $cl4;
-        border-radius: 0;
         &:hover{ box-shadow: none; }
     }
 }
 .bt-vercart{
-    background: #088715;
+    background: $cl1;
+    &:hover{ background: $cl2;}
+    border: 0;
+    
 }
 
 .bt-checkout{
-    background: $cl1;
+    background: #088715;
+    border:0;
 }
 
 #menu{
@@ -218,6 +227,47 @@ $cllink: #696973;
     }
 }
 
+#modalNotification{
+    top: 20px;
+    right: 20px;
+    left: inherit;
+    width: 400px;
+    height: auto;
+
+    .modal-dialog{
+        transform: translate(0, -1px);
+        margin: 0;
+    }
+    .modal-content{ overflow: hidden; }
+    .table{ margin: 0;}
+    .column-thumb{ width: 30%;}
+    .column-preview{ padding-left: 0;}
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@keyframes slideInUp {
+    from {
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+      visibility: visible;
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+.slideInUp {
+    -webkit-animation-name: slideInUp;
+    animation-name: slideInUp;
+}
+
 #modalLogin{
     .modal-dialog{ width: 900px; }
     .padd{ padding: 40px; }
@@ -259,25 +309,34 @@ $cllink: #696973;
 .prod-item{ margin-bottom: 30px;}
 
 .card-body{ position: relative;}
+.card-reviews{ margin-bottom: 14px; color: #5F5F5F; }
+.icon-star{ 
+    color: $cl2;
+    font-size: 20px;
+    line-height: 20px;
+ }
+.star-e{ color: #C2C2C2;}
+.card-comments{ font-size: .9rem;}
 .card-title{
     color: #5F5F5F;
     font-weight: normal;
     font-size: 1.1rem;
-    margin-bottom: 10px;
+    margin-bottom: 18px;
 }
 .card-price{
     color: #4F4F4F;
     font-weight: 700;
     font-size: 1.3rem;
+    line-height: 1.3rem;
+    margin-bottom: 20px;
+    display: block;
 }
-.card-add{
-    width: 50px;
-    height: 50px;
-    background: $cl2 url('../images/icons.svg') -151px 11px no-repeat;
-    border-radius: 50px;
-    position: absolute;
-    right: 15px;
-    top: -25px;
-    font-size: 0;
-    &:hover{ background-color: $cl1;}
+.prod-qtd{
+    @extend .form-control;
+    width: auto;
+    text-align: center;
+    margin-right: 20px;
+}
+.cart-add{
+    @extend .bt-vercart;
 }
