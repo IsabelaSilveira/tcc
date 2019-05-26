@@ -65,9 +65,7 @@ jQuery('document').ready(function(){
     });
     
 
-jQuery("window").scroll( function(){
-
-    console.log('teste');
+jQuery(window).on('scroll', function(){
 
     var header = jQuery(document).scrollTop();
     var headerHeight = jQuery("#header").outerHeight();

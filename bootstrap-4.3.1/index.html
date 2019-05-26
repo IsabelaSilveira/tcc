@@ -12,115 +12,112 @@
 </head>
 <body>
     <header id="header" class="header">
-        <div class="container">
-            <div class="d-flex flex-nowrap justify-content-between align-items-center">
-                <h1 class="logo"><a href="#" title="Página Inicial"><img src="images/logo.png" alt="Logo Tech Plus"></a></h1>
-
-                <form id="main-search" action="form-inline" class="search">
-                    <input class="form-control" type="text" placeholder="Digite sua busca aqui.." aria-label="Buscar">
-                    <button class="btn" type="submit">Buscar</button>
-                </form>
-
-                <div class="links">
-                    <a href="javascript:void(0)" class="top-link" title="Entre ou Cadastre-se" data-toggle="modal" data-target="#modalLogin">Entre ou Cadastre-se</a>
-                    <a href="#" class="top-link" title="Ver Meus Pedidos">Meus Pedidos</a>
-                </div>
-
-                <div id="cart" class="dropdown">
-                    <a href="#" title="Carrinho" data-toggle="dropdown" aria-expanded="false" class="d-flex cart-link">
-                        <div class="cart-total align-self-center"><span id="qtd-itens">0</span> item(s) - R$ <span id="valor-total">0</span></div>
-                        <i class="shopping-cart"></i>
-                    </a>
-
-                    <div id="cart-preview" class="dropdown-menu">
-                        <div class="cart-overflow">
-                        <table class="table">
-                            <tbody>
-                            </tbody>
-                        </table>
-                        </div>
-
-                        <div id="preview-rdp" class="d-flex justify-content-between">
-                            <a href="#" class="btn btn-secondary bt-vercart" title="Ver Carrinho">Ver Carrinho</a>
-                            <a href="#" class="btn btn-primary bt-checkout" title="Finalizar Compras">Finalizar a compra</a>
-                        </div> 
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div id="menu">
+        <div id="nav-default">
             <div class="container">
-                <nav class="navigation">
-                    <ul class="nav d-flex justify-content-between">
-                        <li class="nav-item dropdown">
-                            <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Compre por categoria</a>
-                            <ul id="drop-nvl1" class="dropdown-menu">
-                                <li class="dropdown-item"><a href="" class="dropdown-link" title="Eletrônicos">Eletrônicos</a></li>
-                                <li class="dropdown-item dropdown-submenu">
-                                    <a href="javascript:void(0)" title="Celular e Telefone" data-toggle="dropdown" aria-haspopup="true" class="dropdown-toggle dropdown-link">Celular e Telefone</a>
-                                    <div id="drop-nvl2" class="dropdown-menu">    
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <h2 class="cat-tit">Celulares</h2>
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <div class="padd">
-                                                        <strong>Marcas em destaque</strong>
-                                                        <ul class="list-unstyled">
-                                                            <li class="dropdown-item"><a href="" class="list-link">Produto 1</a></li>
-                                                            <li class="dropdown-item"><a href="" class="list-link">Produto 2</a></li>
-                                                            <li class="dropdown-item"><a href="" class="list-link">Produto 3</a></li>
-                                                            <li class="dropdown-item"><a href="" class="list-link">Produto 4</a></li>
-                                                            <li class="dropdown-item"><a href="" class="list-link">Produto 5</a></li>
-                                                            <li class="dropdown-item"><a href="" class="list-link">Produto 6</a></li>
-                                                            <li class="dropdown-item"><a href="" class="list-link">Produto 7</a></li>
-                                                        </ul>
+                <nav id="nav-top" class="navbar flex-row">
+                    <a href="#" title="Página Inicial" class="logo order-0"></a>
+
+                    <form id="main-search" action="form-inline" class="col-lg-4 order-lg-1 order-sm-4">
+                        <input class="form-control" type="text" placeholder="Digite sua busca aqui.." aria-label="Buscar">
+                        <button class="btn" type="submit">Buscar</button>
+                    </form>
+
+                    <div class="links order-lg-3 order-sm-2">
+                        <a href="javascript:void(0)" class="top-link" title="Entre ou Cadastre-se" data-toggle="modal" data-target="#modalLogin">Entre ou Cadastre-se</a>
+                        <a href="#" class="top-link" title="Ver Meus Pedidos">Meus Pedidos</a>
+                    </div>
+
+                    <div id="cart" class="dropdown order-lg-4 order-sm-3">
+                        <a href="#" title="Carrinho" data-toggle="dropdown" aria-expanded="false" class="d-flex cart-link">
+                            <div class="cart-total align-self-center"><span id="qtd-itens">0</span> item(s) - R$ <span id="valor-total">0</span></div>
+                            <i class="shopping-cart"></i>
+                        </a>
+
+                        <div id="cart-preview" class="dropdown-menu">
+                            <div class="cart-overflow">
+                            <table class="table">
+                                <tbody>
+                                </tbody>
+                            </table>
+                            </div>
+
+                            <div id="preview-rdp" class="d-flex justify-content-between">
+                                <a href="#" class="btn btn-secondary bt-vercart" title="Ver Carrinho">Ver Carrinho</a>
+                                <a href="#" class="btn btn-primary bt-checkout" title="Finalizar Compras">Finalizar a compra</a>
+                            </div> 
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div id="menu">
+                <div class="container">
+                    <nav class="navigation">
+                        <ul class="nav d-flex justify-content-between">
+                            <li class="nav-item dropdown has-container">
+                                <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Compre por categoria</a>
+                                <ul id="drop-nvl1" class="dropdown-menu">
+                                    <li class="dropdown-item"><a href="" class="dropdown-link" title="Eletrônicos">Eletrônicos</a></li>
+                                    <li class="dropdown-item dropdown-submenu has-container">
+                                        <a href="javascript:void(0)" title="Celular e Telefone" data-toggle="dropdown" aria-haspopup="true" class="dropdown-toggle dropdown-link">Celular e Telefone</a>
+                                        <div id="drop-nvl2" class="dropdown-menu">    
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <h2 class="cat-tit">Celulares</h2>
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="padd">
+                                                            <strong>Marcas em destaque</strong>
+                                                            <ul class="list-unstyled">
+                                                                <li class="dropdown-item"><a href="" class="list-link">Produto 1</a></li>
+                                                                <li class="dropdown-item"><a href="" class="list-link">Produto 2</a></li>
+                                                                <li class="dropdown-item"><a href="" class="list-link">Produto 3</a></li>
+                                                                <li class="dropdown-item"><a href="" class="list-link">Produto 4</a></li>
+                                                                <li class="dropdown-item"><a href="" class="list-link">Produto 5</a></li>
+                                                            </ul>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <div class="padd">
-                                                        <strong>Modelos mais buscados</strong>
-                                                        <ul class="list-unstyled">
-                                                            <li class="dropdown-item"><a href="" class="list-link">Modelo 1</a></li>
-                                                            <li class="dropdown-item"><a href="" class="list-link">Modelo 2</a></li>
-                                                            <li class="dropdown-item"><a href="" class="list-link">Modelo 3</a></li>
-                                                            <li class="dropdown-item"><a href="" class="list-link">Modelo 4</a></li>
-                                                            <li class="dropdown-item"><a href="" class="list-link">Modelo 5</a></li>
-                                                            <li class="dropdown-item"><a href="" class="list-link">Modelo 6</a></li>
-                                                            <li class="dropdown-item"><a href="" class="list-link">Modelo 7</a></li>
-                                                        </ul>
+                                                        <div class="col-sm-6">
+                                                            <div class="padd">
+                                                            <strong>Modelos mais buscados</strong>
+                                                            <ul class="list-unstyled">
+                                                                <li class="dropdown-item"><a href="" class="list-link">Modelo 1</a></li>
+                                                                <li class="dropdown-item"><a href="" class="list-link">Modelo 2</a></li>
+                                                                <li class="dropdown-item"><a href="" class="list-link">Modelo 3</a></li>
+                                                                <li class="dropdown-item"><a href="" class="list-link">Modelo 4</a></li>
+                                                            </ul>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="col-lg-6 d-md-none d-lg-block"><a href="" title="Banner em destaque"><img src="images/prod-banner.png" alt="" class="img-fluid"></a></div>
                                             </div>
-                                            <div class="col-sm-6"><a href="" title="Banner em destaque"><img src="images/prod-banner.png" alt="" class="img-fluid"></a></div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="dropdown-item"><a href="" class="dropdown-link" title="Presentes">Presentes</a></li>
-                                <li class="dropdown-item"><a href="" class="dropdown-link" title="Casa e Jardim">Casa e Jardim</a></li>
-                                <li class="dropdown-item"><a href="" class="dropdown-link" title="Esporte e Lazer">Esporte e Lazer</a></li>
-                                <li class="dropdown-item"><a href="" class="dropdown-link" title="Automação">Automação</a></li>
-                                <li class="dropdown-item"><a href="" class="dropdown-link" title="Ferramentas">Ferramentas</a></li>
-                                <li class="dropdown-item"><a href="" class="dropdown-link" title="Eletroportáteis">Eletroportáteis</a></li>
-                                <li class="dropdown-item"><a href="" class="dropdown-link" title="Vídeo e Som">Vídeo e Som</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a href="" class="nav-link">Hardware</a></li>
-                        <li class="nav-item"><a href="" class="nav-link">Smartphones</a></li>
-                        <li class="nav-item"><a href="" class="nav-link">Periféricos</a></li>
-                        <li class="nav-item"><a href="" class="nav-link">Computadores</a></li>
-                        <li class="nav-item"><a href="" class="nav-link">Placas de Vídeo</a></li>
-                        <li class="nav-item"><a href="" class="nav-link">Monitores</a></li>
-                        <li class="nav-item"><a href="" class="nav-link">Teclados e Mouses</a></li>
-                    </ul>
-                </nav>
+                                    </li>
+                                    <li class="dropdown-item"><a href="" class="dropdown-link" title="Presentes">Presentes</a></li>
+                                    <li class="dropdown-item"><a href="" class="dropdown-link" title="Casa e Jardim">Casa e Jardim</a></li>
+                                    <li class="dropdown-item"><a href="" class="dropdown-link" title="Esporte e Lazer">Esporte e Lazer</a></li>
+                                    <li class="dropdown-item"><a href="" class="dropdown-link" title="Automação">Automação</a></li>
+                                    <li class="dropdown-item"><a href="" class="dropdown-link" title="Ferramentas">Ferramentas</a></li>
+                                    <li class="dropdown-item"><a href="" class="dropdown-link" title="Eletroportáteis">Eletroportáteis</a></li>
+                                    <li class="dropdown-item"><a href="" class="dropdown-link" title="Vídeo e Som">Vídeo e Som</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a href="" class="nav-link">Hardware</a></li>
+                            <li class="nav-item"><a href="" class="nav-link">Smartphones</a></li>
+                            <li class="nav-item"><a href="" class="nav-link">Periféricos</a></li>
+                            <li class="nav-item"><a href="" class="nav-link">Computadores</a></li>
+                            <li class="nav-item"><a href="" class="nav-link">Placas de Vídeo</a></li>
+                            <li class="nav-item"><a href="" class="nav-link">Monitores</a></li>
+                            <li class="nav-item"><a href="" class="nav-link">Teclados e Mouses</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
         
     </header>
+    
 
     <div id="modalLogin" class="modal fade"  tabindex="-1" role="dialog">
         <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -236,7 +233,7 @@
         <div class="container">
         <h2 class="sec-tit text-center">Produtos mais procurados</h2>
         <div class="prod-list row">
-            <div class="col-sm-3 prod-item">
+            <div class="col-sm-6 col-lg-3 prod-item">
                 <div data-id="prod-1" class="card">
                     <a href="" title="Smartphone Modelo X"><img src="images/prod-thumb.png" alt="" class="card-img-top" data-img="images/prod-thumb.png"></a>
                     <div class="card-body">
@@ -261,7 +258,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-3 prod-item">
+            <div class="col-sm-6 col-lg-3 prod-item">
                 <div data-id="prod-2" class="card">
                     <a href="" title="Smartphone Modelo X"><img src="images/prod-thumb2.png" alt="" class="card-img-top" data-img="images/prod-thumb2.png"></a>
                     <div class="card-body">
@@ -286,7 +283,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-3 prod-item">
+            <div class="col-sm-6 col-lg-3 prod-item">
                 <div data-id="prod-3" class="card">
                     <a href="" title="Subwoofer 5.0"><img src="images/prod-thumb3.png" alt="" class="card-img-top" data-img="images/prod-thumb3.png"></a>
                     <div class="card-body">
@@ -311,7 +308,7 @@
                 </div>
             </div>
 
-            <div class="col-sm-3 prod-item">
+            <div class="col-sm-6 col-lg-3 prod-item">
                 <div data-id="prod-4" class="card">
                     <a href="" title="Smartphone Modelo X"><img src="images/prod-thumb4.png" alt="" class="card-img-top" data-img="images/prod-thumb4.png"></a>
                     <div class="card-body">
