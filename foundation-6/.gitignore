@@ -3,3 +3,8 @@ bower_components
 node_modules
 npm-debug.log
 css
+gulpfile
+index-bkp
+package.json
+package-lock.json
+yarn.lock
