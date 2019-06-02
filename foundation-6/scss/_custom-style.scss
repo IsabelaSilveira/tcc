@@ -10,12 +10,12 @@ $btn-cat: 265px;
 *{ font-family: 'Lato',sans-serif;}
 
 .header{ 
-    background: #f6f6f6;
+    background: #f2f2f2;
     padding-top: 15px;
 }
 #nav-top{ padding: 0;}
 .logo{
-    width: 170px;
+    width: 170px; 
     height: 38px;
     background: url('../images/logo.svg') left top no-repeat;
     margin: 0;
@@ -52,25 +52,30 @@ $btn-cat: 265px;
 #main-search{
     margin-top: 20px; 
     padding: 0;
+    position: relative;
 
-    .form-control{
+    .form-input{
         padding-right: 60px;
         height: 50px;
         border:1px solid #DFE7F6;
+        margin-bottom: 0;
+        border-radius: .25rem;
         &:focus{
             box-shadow: none;
             border-color: $cl1;
         }
     }
 
-    .btn{
+    .button{
         position: absolute;
         top: 0;
         right: 0;
         width: 50px;
         height: 50px;
+        margin-bottom: 0;
         background: $cl1 url('../images/icons.svg') 0 10px no-repeat;
         font-size: 0;
+        border-radius: .25rem;
     }
 }
 
@@ -107,9 +112,13 @@ $btn-cat: 265px;
     &::before{ background-position: -110px 0;}
 }
 
+#cart{
+    position: relative;
+}
 .cart-link{
     color: $cltxt;
     font: 1rem 'Lato',sans-serif;
+    
     &:hover{
         text-decoration: none;
         color: $cl1;
@@ -164,31 +173,54 @@ $btn-cat: 265px;
 #menu{
     background: $cl1;
     margin-top: 15px;
-    .dropdown-menu{ margin: 0; border-radius: 0;}
-    .nav>li:first-child{ 
-        width: 100%; 
-        background: #EDEFF2;
-        color: $cl3;
+    // .dropdown-menu{ margin: 0; border-radius: 0;}
+    // .nav{ width: 100%;}
+
+    // .nav>li:first-child{ 
+    //     width: 100%; 
+    //     background: #EDEFF2;
+    //     color: $cl3;
         
-        &:hover{ background: $cl2;}
-        .nav-link{ 
-            color: $cl3;
-            font: 600 1.08rem 'Lato', sans-serif;
-            text-transform: uppercase;
-            line-height: 23px;
-        }
-    }
-    .nav-item.show .nav-link{ background: $cl2; }
-    .nav-link{ 
-        color: $cl4;
-        padding: 10px;
-        &:hover{
-            color: $cl3;
-            background: $cl2;
-        }
-    }
-    
+    //     &:hover{ background: $cl2;}
+    //     .nav-link{ 
+    //         color: $cl3;
+    //         font: 600 1.08rem 'Lato', sans-serif;
+    //         text-transform: uppercase;
+    //         line-height: 23px;
+    //     }
+    // }
+    // .nav-item.show .nav-link{ background: $cl2; }
+    // .nav-link{ 
+    //     color: $cl4;
+    //     padding: 10px;
+    //     &:hover{
+    //         color: $cl3;
+    //         background: $cl2;
+    //     }
+    // }  
 }
+#menu-full{ width: 100%; }
+.nav-item:first-child{ 
+    background: #EDEFF2;
+    color: $cl3;
+    
+    &:hover{ background: $cl2;}
+    .nav-link{ 
+        color: $cl3;
+        font: 600 1.08rem 'Lato', sans-serif;
+        text-transform: uppercase;
+        // line-height: 23px;
+    }
+}
+.nav-link{ 
+    color: $cl4;
+    padding: 10px;
+    &:hover{
+        color: $cl3;
+        background: $cl2;
+    }
+}  
+
 .dropdown-submenu{
     .dropdown-menu{
         left: 100%;
@@ -372,7 +404,7 @@ $btn-cat: 265px;
     display: block;
 }
 .prod-qtd{
-    @extend .form-control;
+    @extend .form-input;
     width: auto;
     text-align: center;
     margin-right: 20px;

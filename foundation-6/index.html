@@ -13,113 +13,211 @@
 <body>
     <header id="header" class="header">
         <div id="nav-default">
-            <div class="row">
-                <nav id="nav-top" class="navbar flex-row">
-                    <a href="#" title="Página Inicial" class="logo order-0"></a>
 
-                    <form id="main-search" action="form-inline" class="col-lg-4 order-lg-1 order-sm-4">
-                        <input class="form-control" type="text" placeholder="Digite sua busca aqui.." aria-label="Buscar">
-                        <button class="btn" type="submit">Buscar</button>
-                    </form>
+        <nav id="nav-top" class="row align-middle align-justify">
+            <a href="#" title="Página Inicial" class="logo columns shrink"></a>
 
-                    <div class="links order-lg-3 order-sm-2">
-                        <a href="javascript:void(0)" class="top-link" title="Entre ou Cadastre-se" data-toggle="modal" data-target="#modalLogin">Entre ou Cadastre-se</a>
-                        <a href="#" class="top-link" title="Ver Meus Pedidos">Meus Pedidos</a>
-                    </div>
+            <form id="main-search" action="" class="columns medium-4">
+                <input class="form-input" type="text" placeholder="Digite sua busca aqui..">
+                <button class="button" type="submit">Buscar</button>
+            </form>
 
-                    <div id="cart" class="dropdown order-lg-4 order-sm-3">
-                        <a href="#" title="Carrinho" data-toggle="dropdown" aria-expanded="false" class="d-flex cart-link">
-                            <div class="cart-total align-self-center"><span id="qtd-itens">0</span> item(s) - R$ <span id="valor-total">0</span></div>
-                            <i class="shopping-cart"></i>
-                        </a>
-
-                        <div id="cart-preview" class="dropdown-menu">
-                            <div class="cart-overflow">
-                            <table class="table">
-                                <tbody>
-                                </tbody>
-                            </table>
-                            </div>
-
-                            <div id="preview-rdp" class="d-flex justify-content-between">
-                                <a href="#" class="btn btn-secondary bt-vercart" title="Ver Carrinho">Ver Carrinho</a>
-                                <a href="#" class="btn btn-primary bt-checkout" title="Finalizar Compras">Finalizar a compra</a>
-                            </div> 
-                        </div>
-                    </div>
-                </nav>
+            <div class="links columns shrink">
+                <a href="javascript:void(0)" class="top-link" title="Entre ou Cadastre-se" data-toggle="modal" data-target="#modalLogin">Entre ou Cadastre-se</a>
+                <a href="#" class="top-link" title="Ver Meus Pedidos">Meus Pedidos</a>
             </div>
 
-            <div id="menu">
-                <div class="row">
-                    <nav class="navigation">
-                        <ul class="nav d-flex justify-content-between">
-                            <li class="nav-item dropdown has-container">
-                                <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Compre por categoria</a>
-                                <ul id="drop-nvl1" class="dropdown-menu">
-                                    <li class="dropdown-item"><a href="" class="dropdown-link" title="Eletrônicos">Eletrônicos</a></li>
-                                    <li class="dropdown-item dropdown-submenu has-container">
-                                        <a href="javascript:void(0)" title="Celular e Telefone" data-toggle="dropdown" aria-haspopup="true" class="dropdown-toggle dropdown-link">Celular e Telefone</a>
-                                        <div id="drop-nvl2" class="dropdown-menu">    
-                                            <div class="row">
-                                                <div class="col-lg-6">
-                                                    <h2 class="cat-tit">Celulares</h2>
-                                                    <div class="row">
-                                                        <div class="col-sm-6">
-                                                            <div class="padd">
-                                                            <strong>Marcas em destaque</strong>
-                                                            <ul class="list-unstyled">
-                                                                <li class="dropdown-item"><a href="" class="list-link">Produto 1</a></li>
-                                                                <li class="dropdown-item"><a href="" class="list-link">Produto 2</a></li>
-                                                                <li class="dropdown-item"><a href="" class="list-link">Produto 3</a></li>
-                                                                <li class="dropdown-item"><a href="" class="list-link">Produto 4</a></li>
-                                                                <li class="dropdown-item"><a href="" class="list-link">Produto 5</a></li>
-                                                            </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <div class="padd">
-                                                            <strong>Modelos mais buscados</strong>
-                                                            <ul class="list-unstyled">
-                                                                <li class="dropdown-item"><a href="" class="list-link">Modelo 1</a></li>
-                                                                <li class="dropdown-item"><a href="" class="list-link">Modelo 2</a></li>
-                                                                <li class="dropdown-item"><a href="" class="list-link">Modelo 3</a></li>
-                                                                <li class="dropdown-item"><a href="" class="list-link">Modelo 4</a></li>
-                                                            </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 d-md-none d-lg-block"><a href="" title="Banner em destaque"><img src="images/prod-banner.png" alt="" class="img-fluid"></a></div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="dropdown-item"><a href="" class="dropdown-link" title="Presentes">Presentes</a></li>
-                                    <li class="dropdown-item"><a href="" class="dropdown-link" title="Casa e Jardim">Casa e Jardim</a></li>
-                                    <li class="dropdown-item"><a href="" class="dropdown-link" title="Esporte e Lazer">Esporte e Lazer</a></li>
-                                    <li class="dropdown-item"><a href="" class="dropdown-link" title="Automação">Automação</a></li>
-                                    <li class="dropdown-item"><a href="" class="dropdown-link" title="Ferramentas">Ferramentas</a></li>
-                                    <li class="dropdown-item"><a href="" class="dropdown-link" title="Eletroportáteis">Eletroportáteis</a></li>
-                                    <li class="dropdown-item"><a href="" class="dropdown-link" title="Vídeo e Som">Vídeo e Som</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item"><a href="" class="nav-link">Hardware</a></li>
-                            <li class="nav-item"><a href="" class="nav-link">Smartphones</a></li>
-                            <li class="nav-item"><a href="" class="nav-link">Periféricos</a></li>
-                            <li class="nav-item"><a href="" class="nav-link">Computadores</a></li>
-                            <li class="nav-item"><a href="" class="nav-link">Placas de Vídeo</a></li>
-                            <li class="nav-item"><a href="" class="nav-link">Monitores</a></li>
-                            <li class="nav-item"><a href="" class="nav-link">Teclados e Mouses</a></li>
-                        </ul>
-                    </nav>
+            <div id="cart" class="dropdown columns shrink">
+                <a href="javascript:void(0)" title="Carrinho" data-toggle="cart-preview" class="row align-middle cart-link">
+                    <div class="cart-total align-self-center"><span id="qtd-itens">0</span> item(s) - R$ <span id="valor-total">0</span></div>
+                    <div class="shopping-cart"></div>
+                </a>
+
+                <div id="cart-preview" class="dropdown-pane " data-dropdown data-auto-focus="true" data-position="bottom" data-alignment="left"> 
+                    <div class="cart-overflow">
+                    <table class="table">
+                        <tbody>
+                        </tbody>
+                    </table>
+                    </div>
+
+                    <div id="preview-rdp" class="d-flex justify-content-between">
+                        <a href="#" class="button button-secondary bt-vercart" title="Ver Carrinho">Ver Carrinho</a>
+                        <a href="#" class="button  bt-checkout" title="Finalizar Compras">Finalizar a compra</a>
+                    </div> 
                 </div>
             </div>
+        </nav>
+
+
+        <div id="menu">
+            <nav class="navigation row">
+            <!-- <ul class="nav menu align-justify">
+
+            <li class="nav-item dropdown has-container">
+                <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Compre por categoria</a>
+                <ul id="drop-nvl1" class="dropdown-menu">
+                    <li class="dropdown-item"><a href="" class="dropdown-link" title="Eletrônicos">Eletrônicos</a></li>
+                    <li class="dropdown-item dropdown-submenu has-container">
+                        <a href="javascript:void(0)" title="Celular e Telefone" data-toggle="dropdown" aria-haspopup="true" class="dropdown-toggle dropdown-link">Celular e Telefone</a>
+                        <div id="drop-nvl2" class="dropdown-menu">    
+                            <div class="row">
+
+                            <div class="col-lg-6">
+
+                            <h2 class="cat-tit">Celulares</h2>
+                            <div class="row">
+                                <div class="small-6">
+                                    <div class="padd">
+                                    <strong>Marcas em destaque</strong>
+                                    <ul class="list-unstyled">
+                                        <li class="dropdown-item"><a href="" class="list-link">Produto 1</a></li>
+                                        <li class="dropdown-item"><a href="" class="list-link">Produto 2</a></li>
+                                        <li class="dropdown-item"><a href="" class="list-link">Produto 3</a></li>
+                                        <li class="dropdown-item"><a href="" class="list-link">Produto 4</a></li>
+                                        <li class="dropdown-item"><a href="" class="list-link">Produto 5</a></li>
+                                    </ul>
+                                    </div>
+                                </div>
+                                <div class="small-6">
+                                    <div class="padd">
+                                    <strong>Modelos mais buscados</strong>
+                                    <ul class="list-unstyled">
+                                        <li class="dropdown-item"><a href="" class="list-link">Modelo 1</a></li>
+                                        <li class="dropdown-item"><a href="" class="list-link">Modelo 2</a></li>
+                                        <li class="dropdown-item"><a href="" class="list-link">Modelo 3</a></li>
+                                        <li class="dropdown-item"><a href="" class="list-link">Modelo 4</a></li>
+                                    </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            </div>
+                            <div class="col-lg-6 d-md-none d-lg-block"><a href="" title="Banner em destaque"><img src="images/prod-banner.png" alt="" class="img-fluid"></a></div>
+                            
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown-item"><a href="" class="dropdown-link" title="Presentes">Presentes</a></li>
+                    <li class="dropdown-item"><a href="" class="dropdown-link" title="Casa e Jardim">Casa e Jardim</a></li>
+                    <li class="dropdown-item"><a href="" class="dropdown-link" title="Esporte e Lazer">Esporte e Lazer</a></li>
+                    <li class="dropdown-item"><a href="" class="dropdown-link" title="Automação">Automação</a></li>
+                    <li class="dropdown-item"><a href="" class="dropdown-link" title="Ferramentas">Ferramentas</a></li>
+                    <li class="dropdown-item"><a href="" class="dropdown-link" title="Eletroportáteis">Eletroportáteis</a></li>
+                    <li class="dropdown-item"><a href="" class="dropdown-link" title="Vídeo e Som">Vídeo e Som</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="" class="nav-link">Hardware</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Smartphones</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Periféricos</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Computadores</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Placas de Vídeo</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Monitores</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Teclados e Mouses</a></li>
+            </ul> -->
+            
+            <ul id="menu-full" class="dropdown menu align-justify" data-dropdown-menu>
+                <!-- <li>
+                    <a href="#Item-1">Item 1</a>
+                    <ul class="menu">
+                    <li><a href="#Item-1A">Item 1A</a></li>
+                    <li>
+                        <a href="#Item-1B">Item 1B</a>
+                        <ul class="menu">
+                        <li><a href="#Item-1Bi">Item 1B i</a></li>
+                        <li><a href="#Item-1Bii">Item 1B ii</a></li>
+                        <li>
+                            <a href="#Item-1Biii">Item 1B iii</a>
+                            <ul class="menu">
+                            <li><a href="#Item-1Biiialpha">Item 1B iii alpha</a></li>
+                            <li><a href="#Item-1Biiiomega">Item 1B iii omega</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#Item-1Biv">Item 1B iv</a>
+                            <ul class="menu">
+                            <li><a href="#Item-1Bivalpha">Item 1B iv alpha</a></li>
+                            </ul>
+                        </li>
+                        </ul>
+                    </li>
+                    <li><a href="#Item-1C">Item 1C</a></li>
+                    </ul>
+                </li> -->
+
+                <li class="nav-item">
+                    <a href="" class="nav-link">Compre por categoria</a>
+                    <ul id="drop-nvl1" class="menu">
+                        <li class="dropdown-item"><a href="" class="dropdown-link" title="Eletrônicos">Eletrônicos</a></li>
+                        <li class="dropdown-item">
+                            <a href="" class="dropdown-link" title="Celular e Telefone">Celular e Telefone</a>
+                            <ul id="drop-nvl2" class="menu">
+                                <div class="row">
+    
+                                <div class="large-6">
+    
+                                <h2 class="cat-tit">Celulares</h2>
+                                <div class="row">
+                                    <div class="small-6">
+                                        <div class="padd">
+                                        <strong>Marcas em destaque</strong>
+                                        <ul class="menu">
+                                            <li class="dropdown-item"><a href="" class="list-link">Produto 1</a></li>
+                                            <li class="dropdown-item"><a href="" class="list-link">Produto 2</a></li>
+                                            <li class="dropdown-item"><a href="" class="list-link">Produto 3</a></li>
+                                            <li class="dropdown-item"><a href="" class="list-link">Produto 4</a></li>
+                                            <li class="dropdown-item"><a href="" class="list-link">Produto 5</a></li>
+                                        </ul>
+                                        </div>
+                                    </div>
+                                    <div class="small-6">
+                                        <div class="padd">
+                                        <strong>Modelos mais buscados</strong>
+                                        <ul class="menu">
+                                            <li class="dropdown-item"><a href="" class="list-link">Modelo 1</a></li>
+                                            <li class="dropdown-item"><a href="" class="list-link">Modelo 2</a></li>
+                                            <li class="dropdown-item"><a href="" class="list-link">Modelo 3</a></li>
+                                            <li class="dropdown-item"><a href="" class="list-link">Modelo 4</a></li>
+                                        </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                </div>
+                                <div class="large-6"><a href="" title="Banner em destaque"><img src="images/prod-banner.png" alt="" class="img-fluid"></a></div>
+                                
+                                </div>
+                            </ul>
+
+                        </li>
+                        <li class="dropdown-item"><a href="" class="dropdown-link" title="Presentes">Presentes</a></li>
+                        <li class="dropdown-item"><a href="" class="dropdown-link" title="Casa e Jardim">Casa e Jardim</a></li>
+                        <li class="dropdown-item"><a href="" class="dropdown-link" title="Esporte e Lazer">Esporte e Lazer</a></li>
+                        <li class="dropdown-item"><a href="" class="dropdown-link" title="Automação">Automação</a></li>
+                        <li class="dropdown-item"><a href="" class="dropdown-link" title="Ferramentas">Ferramentas</a></li>
+                        <li class="dropdown-item"><a href="" class="dropdown-link" title="Eletroportáteis">Eletroportáteis</a></li>
+                        <li class="dropdown-item"><a href="" class="dropdown-link" title="Vídeo e Som">Vídeo e Som</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="" class="nav-link">Hardware</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Smartphones</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Periféricos</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Computadores</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Placas de Vídeo</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Monitores</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Teclados e Mouses</a></li>
+
+            </ul>
+            </nav>
+
+        </div>
+ 
         </div>
         
     </header>
     
 
-    <div id="modalLogin" class="modal fade"  tabindex="-1" role="dialog">
+    <!-- <div id="modalLogin" class="modal fade"  tabindex="-1" role="dialog">
         <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">  
 
@@ -129,7 +227,7 @@
 
         <div class="d-flex">
 
-        <div class="col-sm-6 padd border-divisor">
+        <div class="small-6 padd border-divisor">
         <h2 class="modal-title text-center">Já é cadastrado?</h2>
         <p class="text-center text-muted">Então entre com seus dados de login e senha.</p>
 
@@ -139,18 +237,18 @@
                 <input type="text" id="inptNome" placeholder="Digite seu nome" class="form-control">
             </div>
 
-            <div class="form-group col-sm-6">
+            <div class="form-group small-6">
                 <label for="inptEmail">E-mail</label>
                 <input type="email" id="inptEmail" aria-describedby="emailHelp" placeholder="Digite seu email" class="form-control">
             </div>
 
             <div class="form-group col-sm-12"><a href="#" title="Alterar senha">Esqueci minha senha</a></div>
 
-            <div class="col-sm-12"><button type="submit" class="btn btn-primary">Acessar</button></div>
+            <div class="col-sm-12"><button type="submit" class="button">Acessar</button></div>
         </form>
         </div>
 
-        <div class="col-sm-6 padd">
+        <div class="small-6 padd">
         <h2 class="modal-title text-center">Ainda não é cadastrado no site?</h2>
         <p class="text-center text-muted">Faça agora mesmo o seu cadastro, é simples e rápido!</p>
 
@@ -160,22 +258,22 @@
                 <input type="email" id="inptEmail" aria-describedby="emailHelp" placeholder="Digite seu email" class="form-control">
             </div>
 
-            <div class="form-group col-sm-6">
+            <div class="form-group small-6">
                 <label for="inptSenha">Crie sua senha:</label>
                 <input type="password" id="inptSenha" placeholder="Digite a senha" class="form-control">
             </div>
 
-            <div class="form-group col-sm-6">
+            <div class="form-group small-6">
                 <label for="inptSenhaCheck">Confirme sua senha:</label>
                 <input type="password" id="inptSenhaCheck" placeholder="Digite a senha" class="form-control">
             </div>
 
-            <div class="form-group col-sm-6">
+            <div class="form-group small-6">
                 <label for="inptCpf">CPF/CNPJ:</label>
                 <input type="text" id="inptCpf" placeholder="Digite seu cpf/cnpj" class="form-control">
             </div>
 
-            <div class="col-sm-12"><button type="submit" class="btn btn-primary">Cadastrar</button></div>
+            <div class="col-sm-12"><button type="submit" class="button">Cadastrar</button></div>
         </form>
         </div>
 
@@ -199,13 +297,13 @@
         </table>
 
         <div id="preview-rdp" class="d-flex justify-content-between">
-            <a href="#" class="btn bt-vercart" title="Ver Carrinho">Ver Carrinho</a>
-            <a href="#" class="btn btn-primary bt-checkout" title="Finalizar Compras">Finalizar</a>
+            <a href="#" class="button bt-vercart" title="Ver Carrinho">Ver Carrinho</a>
+            <a href="#" class="button  bt-checkout" title="Finalizar Compras">Finalizar</a>
         </div> 
 
         </div>
         </div>
-    </div>
+    </div> -->
         
     <section class="banner">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -230,13 +328,13 @@
     </section>
 
     <section class="produtos">
-        <div class="container">
-        <h2 class="sec-tit text-center">Produtos mais procurados</h2>
+        <div class="row">
+        <h2 class="sec-tit text-center align-self-middle">Produtos mais procurados</h2>
         <div class="prod-list row">
-            <div class="col-sm-6 col-lg-3 prod-item">
+            <div class="column prod-item">
                 <div data-id="prod-1" class="card">
                     <a href="" title="Smartphone Modelo X"><img src="images/prod-thumb.png" alt="" class="card-img-top" data-img="images/prod-thumb.png"></a>
-                    <div class="card-body">
+                    <div class="card-section">
                         <div class="card-reviews">
                             <span class="icon-star star-f">&#9733</span>    
                             <span class="icon-star star-f">&#9733</span>   
@@ -251,17 +349,17 @@
 
                         <div class="d-flex">
                         <input type="number" name="quantity" value="1" min="1" max="5" class="prod-qtd">
-                        <a href="javascript:void(0)" title="Adicionar ao carrinho" class="cart-add btn btn-primary">Comprar</a>
+                        <a href="javascript:void(0)" title="Adicionar ao carrinho" class="cart-add button ">Comprar</a>
                         </div>
                     </div>
                     
                 </div>
             </div>
 
-            <div class="col-sm-6 col-lg-3 prod-item">
+            <div class="column prod-item">
                 <div data-id="prod-2" class="card">
                     <a href="" title="Smartphone Modelo X"><img src="images/prod-thumb2.png" alt="" class="card-img-top" data-img="images/prod-thumb2.png"></a>
-                    <div class="card-body">
+                    <div class="card-section">
                         <div class="card-reviews">
                             <span class="icon-star star-f">&#9733</span>    
                             <span class="icon-star star-f">&#9733</span>   
@@ -276,17 +374,17 @@
 
                         <div class="d-flex">
                         <input type="number" name="quantity" value="1" min="1" max="5" class="prod-qtd">
-                        <a href="javascript:void(0)" title="Adicionar ao carrinho" class="cart-add btn btn-primary">Comprar</a>
+                        <a href="javascript:void(0)" title="Adicionar ao carrinho" class="cart-add button ">Comprar</a>
                         </div>
                     </div>
                     
                 </div>
             </div>
 
-            <div class="col-sm-6 col-lg-3 prod-item">
+            <div class="column prod-item">
                 <div data-id="prod-3" class="card">
                     <a href="" title="Subwoofer 5.0"><img src="images/prod-thumb3.png" alt="" class="card-img-top" data-img="images/prod-thumb3.png"></a>
-                    <div class="card-body">
+                    <div class="card-section">
                         <div class="card-reviews">
                             <span class="icon-star star-f">&#9733</span>    
                             <span class="icon-star star-f">&#9733</span>   
@@ -301,17 +399,17 @@
 
                         <div class="d-flex">
                         <input type="number" name="quantity" value="1" min="1" max="5" class="prod-qtd">
-                        <a href="javascript:void(0)" title="Adicionar ao carrinho" class="cart-add btn btn-primary">Comprar</a>
+                        <a href="javascript:void(0)" title="Adicionar ao carrinho" class="cart-add button ">Comprar</a>
                         </div>
                     </div>
                     
                 </div>
             </div>
 
-            <div class="col-sm-6 col-lg-3 prod-item">
+            <div class="column prod-item">
                 <div data-id="prod-4" class="card">
                     <a href="" title="Smartphone Modelo X"><img src="images/prod-thumb4.png" alt="" class="card-img-top" data-img="images/prod-thumb4.png"></a>
-                    <div class="card-body">
+                    <div class="card-section">
                         <div class="card-reviews">
                             <span class="icon-star star-f">&#9733</span>    
                             <span class="icon-star star-f">&#9733</span>   
@@ -326,7 +424,7 @@
 
                         <div class="d-flex">
                         <input type="number" name="quantity" value="1" min="1" max="5" class="prod-qtd">
-                        <a href="javascript:void(0)" title="Adicionar ao carrinho" class="cart-add btn btn-primary">Comprar</a>
+                        <a href="javascript:void(0)" title="Adicionar ao carrinho" class="cart-add button ">Comprar</a>
                         </div>
                     </div>
                     
@@ -338,9 +436,10 @@
 
 
 
-    <script src="js/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/what-input/dist/what-input.js"></script>
+    <script src="node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script src="js/app.js"></script>
     <script src="js/custom-script.js"></script> 
     
 </body>

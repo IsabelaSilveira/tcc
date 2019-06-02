@@ -19,6 +19,7 @@ $btn-cat: 265px;
     height: 38px;
     background: url('../images/logo.svg') left top no-repeat;
     margin: 0;
+    padding: 0;
 }
 .sticky-top{
     background: $cl1;
@@ -52,20 +53,22 @@ $btn-cat: 265px;
 #main-search{
     margin-top: 20px; 
     padding: 0;
-
-    .form-control{
+    position: relative;  
+    background: #c23; 
+  
+    .form-input{
         padding-right: 60px;
         height: 50px;
         border:1px solid #DFE7F6;
         &:focus{
             box-shadow: none;
             border-color: $cl1;
-        }
+        } 
     }
-
-    .btn{
-        position: absolute;
-        top: 0;
+  
+    .button{ 
+        position: absolute; 
+        top: 0; 
         right: 0;
         width: 50px;
         height: 50px;
