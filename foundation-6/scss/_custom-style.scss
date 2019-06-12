@@ -8,12 +8,17 @@ $cllink: #696973;
 $btn-cat: 265px;
 
 *{ font-family: 'Lato',sans-serif;}
+.d-flex{ display: flex;}
+.container{ 
+    @extend .row; 
+    padding: 0 .625rem;
+}
 
 .header{ 
     background: #f2f2f2;
     padding-top: 15px;
 }
-#nav-top{ padding: 0;}
+#nav-top{ padding-top: 0;}
 .logo{
     width: 170px; 
     height: 38px;
@@ -160,6 +165,7 @@ $btn-cat: 265px;
 }
 .bt-vercart{
     background: $cl1;
+    margin: 0;
     &:hover{ background: $cl2;}
     border: 0;
     
@@ -168,6 +174,7 @@ $btn-cat: 265px;
 .bt-checkout{
     background: #088715;
     border:0;
+    margin: 0;
 }
 
 #menu{
@@ -200,7 +207,7 @@ $btn-cat: 265px;
     // }  
 }
 #menu-full{ width: 100%; }
-.nav-item:first-child{ 
+#header .nav-item:first-child{ 
     background: #EDEFF2;
     color: $cl3;
     
@@ -212,9 +219,10 @@ $btn-cat: 265px;
         // line-height: 23px;
     }
 }
-.nav-link{ 
+#header .nav-link{ 
     color: $cl4;
-    padding: 10px;
+    height: 100%;
+    line-height: normal;
     &:hover{
         color: $cl3;
         background: $cl2;
@@ -303,14 +311,19 @@ $btn-cat: 265px;
     top: 20px;
     right: 20px;
     left: inherit;
+    position: fixed;
+    max-width: inherit;
     width: 400px;
     height: auto;
+    padding: 0;
 
-    .modal-dialog{
-        transform: translate(0, -1px);
-        margin: 0;
-    }
-    .modal-content{ overflow: hidden; }
+    tbody{ border:0;}
+
+    // .modal-dialog{
+    //     transform: translate(0, -1px);
+    //     margin: 0;
+    // }
+    // .modal-content{ overflow: hidden; }
     .table{ margin: 0;}
     .column-thumb{ width: 30%;}
     .column-preview{ padding-left: 0;}
@@ -407,7 +420,7 @@ $btn-cat: 265px;
     @extend .form-input;
     width: auto;
     text-align: center;
-    margin-right: 20px;
+    margin: 0 20px 0 0;
 }
 .cart-add{
     @extend .bt-vercart;
@@ -418,6 +431,7 @@ $btn-cat: 265px;
 }
 
 @media (min-width: 992px){
+
     #main-search{ margin-top: 0;}
 
     .links{ height: 67px;}
