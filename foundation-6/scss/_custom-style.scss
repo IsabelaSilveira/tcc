@@ -180,31 +180,7 @@ $btn-cat: 265px;
 #menu{
     background: $cl1;
     margin-top: 15px;
-    // .dropdown-menu{ margin: 0; border-radius: 0;}
-    // .nav{ width: 100%;}
-
-    // .nav>li:first-child{ 
-    //     width: 100%; 
-    //     background: #EDEFF2;
-    //     color: $cl3;
-        
-    //     &:hover{ background: $cl2;}
-    //     .nav-link{ 
-    //         color: $cl3;
-    //         font: 600 1.08rem 'Lato', sans-serif;
-    //         text-transform: uppercase;
-    //         line-height: 23px;
-    //     }
-    // }
-    // .nav-item.show .nav-link{ background: $cl2; }
-    // .nav-link{ 
-    //     color: $cl4;
-    //     padding: 10px;
-    //     &:hover{
-    //         color: $cl3;
-    //         background: $cl2;
-    //     }
-    // }  
+    .nav-item.is-active .nav-link{ background: $cl2; }
 }
 #menu-full{ width: 100%; }
 #header .nav-item:first-child{ 
@@ -216,7 +192,7 @@ $btn-cat: 265px;
         color: $cl3;
         font: 600 1.08rem 'Lato', sans-serif;
         text-transform: uppercase;
-        // line-height: 23px;
+        &::after{ border-color: $cl3 transparent transparent;}
     }
 }
 #header .nav-link{ 
@@ -244,17 +220,17 @@ $btn-cat: 265px;
     border: 0;
     padding: 2px 0;
 
-    .dropdown-item{ 
-        padding: 0;
-        &:hover{
-            text-decoration: none;
-            outline: none;
-            color: $cllink;
-            background: #DBDFE5;
-        }
+    .dropdown-item{ padding: 0; position: initial;}
+    .is-active> .dropdown-link{
+        text-decoration: none;
+        outline: none;
+        color: $cllink;
+        background: #DBDFE5;
+        &::after{ border-color:transparent transparent transparent $cl3;}
     }
     .dropdown-link{
-        padding: 5px 15px; 
+        position: relative;
+        padding: 9.05px 15px; 
         width: 100%;
         display: block;
         color: $cllink;
@@ -269,6 +245,7 @@ $btn-cat: 265px;
     min-width: calc(90vw - 265px);
     min-height: 100%;
     top: 0;
+    margin-top: 0;
     padding: 15px;
     border: 0;
     background: $cl4;
@@ -291,6 +268,8 @@ $btn-cat: 265px;
 
     .dropdown-item{ 
         margin-bottom: 5px;
+        display: block;
+        width: 100%;
         &:hover{
             text-decoration: none;
             outline: none;
@@ -298,14 +277,19 @@ $btn-cat: 265px;
         }
     }
 
-    .list-link{
+    .list-link{ 
+        padding: 5px 0;
         color: $cllink;
         &:hover{
             text-decoration: none;
             color: $cl1;
         }
     }
+
+    .droplink-banner{ padding: 0}
 }
+
+
 
 #modalNotification{
     top: 20px;
@@ -448,7 +432,7 @@ $btn-cat: 265px;
         width: calc(930px - #{$btn-cat});
         min-width: auto;
         .padd{ padding: 15px; }
-        .cat-tit{ padding: 20px 0 0 20px;}
+        .cat-tit{ padding: 20px 0 0 .9375rem;}
     }
     
 }
