@@ -79,6 +79,7 @@ $(window).on('scroll', function(){
 
     if(header > headerHeight){
         $('#header').addClass('sticky-top');
+        this.console.log("moveu")
     }else{
         $('#header').removeClass('sticky-top');
     }
