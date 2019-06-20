@@ -15,21 +15,26 @@
         <div id="nav-default">
 
         <nav id="nav-top" class="container align-middle align-justify">
-            <a href="#" title="Página Inicial" class="logo columns shrink"></a>
 
-            <form id="main-search" action="" class="columns small-12 medium-4">
+            <div id="menu-trigger" class="title-bar small-order-1" data-hide-for="medium">
+                <div class="menu-icon" data-toggle></div>
+            </div>
+
+            <a href="#" title="Página Inicial" class="logo columns shrink small-order-2"></a>
+
+            <form id="main-search" action="" class="columns small-12 medium-4 small-order-4">
                 <input class="form-input" type="text" placeholder="Digite sua busca aqui..">
                 <button class="button" type="submit">Buscar</button>
             </form>
 
-            <div class="links columns shrink">
-                <a href="javascript:void(0)" class="top-link" title="Entre ou Cadastre-se" data-open="modalLogin">Fazer<br/>Login</a>
+            <div class="links columns shrink small-order-5">
+                <a href="javascript:void(0)" class="top-link" title="Entre ou Cadastre-se" data-open="modalLogin">Fazer <br/>Login</a>
                 <a href="#" class="top-link" title="Ver Meus Pedidos">Meus Pedidos</a>
             </div>
 
-            <div id="cart" class="dropdown columns shrink">
+            <div id="cart" class="dropdown columns shrink small-order-3 large-order-5">
                 <a href="javascript:void(0)" title="Carrinho" data-toggle="cart-preview" class="row align-middle cart-link">
-                    <div class="cart-total align-self-center"><span id="qtd-itens">0</span> item(s) - R$ <span id="valor-total">0</span></div>
+                    <div class="cart-total align-self-center"><span id="qtd-itens">0</span> item(s)</div>
                     <div class="shopping-cart"></div>
                 </a>
 
@@ -64,7 +69,7 @@
                             <ul id="drop-nvl2" class="menu">
                                 <div class="row">
     
-                                <div class="column large-6">
+                                <div class="column small-12 large-6">
     
                                 <h2 class="cat-tit">Celulares</h2>
                                 <div class="row">
@@ -94,7 +99,7 @@
                                 </div>
                                 
                                 </div>
-                                <div class="column large-6"><a href="" title="Banner em destaque" class="droplink-banner"><img src="images/prod-banner.png" alt="" class="img-fluid"></a></div>
+                                <div id="banner-menu" class="column small-12 large-6"><a href="" title="Banner em destaque" class="droplink-banner"><img src="images/prod-banner.png" alt="" class="img-fluid"></a></div>
                                 
                                 </div>
                             </ul>
@@ -127,7 +132,7 @@
     </header>
     
 
-    <div id="modalLogin" class="reveal small" data-reveal>
+    <div id="modalLogin" class="reveal" data-reveal>
 
         <button class="close-button" data-close aria-label="Close modal" type="button">
             <span aria-hidden="true">&times;</span>
@@ -160,6 +165,9 @@
     </div>
 
     <div id="modalNotification" class="reveal">
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>    
 
         <table class="table">
             <tbody>
