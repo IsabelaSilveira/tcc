@@ -3,7 +3,7 @@ bower_components
 node_modules
 npm-debug.log
 gulpfile
-index-bkp
+index-bkp.html
 package.json
 package-lock.json
 yarn.lock
