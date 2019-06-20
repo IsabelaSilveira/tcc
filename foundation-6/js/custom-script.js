@@ -1,7 +1,10 @@
 $('document').ready(function(){
 
     $('#menu-trigger').click(function(){
+        
+        $(this).toggleClass('active');
         $('#menu').toggleClass('active');
+        $('body').toggleClass('overflowHidden');
     });
 
     if($("#cart-preview tr").length == 0){
@@ -82,9 +85,11 @@ $(window).on('scroll', function(){
     var header = $(document).scrollTop();
     var headerHeight = $("#header").outerHeight();
 
-    if(header > headerHeight){
-        $('#header').addClass('sticky-top');
-    }else{
-        $('#header').removeClass('sticky-top');
+    if(window.innerWidth > 992){
+        if(header > headerHeight){
+            $('#header').addClass('sticky-top');
+        }else{
+            $('#header').removeClass('sticky-top');
+        }
     }
 });

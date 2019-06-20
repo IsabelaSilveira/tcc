@@ -14,17 +14,30 @@ $btn-cat: 265px;
     padding: 0 .625rem;
 }
 
+.overflowHidden{ overflow: hidden;}
+
 .header{ 
     background: #f2f2f2;
     padding-top: 15px;
 }
 #nav-top{ padding-top: 0;}
 
-#menu-trigger{ display: flex;}
-.menu-icon::after{
-    background: $cl1;
-    -webkit-box-shadow: 0 7px 0 $cl1, 0 14px 0 $cl1;
-    box-shadow: 0 7px 0 $cl1, 0 14px 0 $cl1;
+#menu-trigger{ 
+    display: flex;
+    &.active .menu-icon::after{ 
+        background: $cl2;
+        -webkit-box-shadow: 0 7px 0 $cl2, 0 14px 0 $cl2;
+        box-shadow: 0 7px 0 $cl2, 0 14px 0 $cl2;
+    }
+}
+.menu-icon,
+.menu-icon:hover{
+
+    &::after{
+        background: $cl1;
+        -webkit-box-shadow: 0 7px 0 $cl1, 0 14px 0 $cl1;
+        box-shadow: 0 7px 0 $cl1, 0 14px 0 $cl1;
+    }
 }
 
 .logo{
@@ -177,7 +190,7 @@ $btn-cat: 265px;
 }
 #cart-preview{ 
     padding: 0;
-    width: 380px;
+    width: 300px;
     right: 0;
     left: inherit!important;
     overflow: hidden;
@@ -247,7 +260,7 @@ $btn-cat: 265px;
         color: $cl4;
         font: 600 1.08rem 'Lato', sans-serif;
         text-transform: uppercase;
-        &::after{ border-color: $cl4 transparent transparent;}
+        &::after{ border-color: $cl4 transparent transparent; transform: rotate(-90deg); }
     }
 }
 #header .nav-link{ 
@@ -346,6 +359,14 @@ $btn-cat: 265px;
 #banner-menu{ display: none;}
 
 .width-full{ width: 100%;}
+
+#modalLogin{
+    padding-bottom: 30px;
+    .button{ 
+        @extend .bt-vercart;
+        margin-top: 30px;
+    }
+}
 
 #modalNotification{
     width: calc(100% - 20px);
@@ -487,6 +508,10 @@ $btn-cat: 265px;
         }
     }
 
+    #cart-preview{ width:380px; }
+
+    #header .nav-item:first-child .nav-link::after{transform: rotate(-90deg);}
+
     #banner-menu{ display: block;}
 
     .cart-total{ display: block;}
@@ -529,7 +554,7 @@ $btn-cat: 265px;
 
 @media (min-width: 1200px){
     #drop-nvl2{ 
-        width: calc(1110px - #{$btn-cat});
+        width: calc(75rem - #{$btn-cat});
     }
 }
 
