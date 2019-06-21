@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tech Plus - Materialize</title>
+    <title>Tech Plus - Bootstrap</title>
 
     <link href="sass/main.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
@@ -14,28 +14,30 @@
     <header id="header" class="header">
         <div id="nav-default">
             <div class="container">
-                <nav id="nav-top" class="navbar row">
-                    <a href="#" title="Página Inicial" class="logo left col s2"></a>
-
-                    <div class="col s6">
-                        <form id="main-search" action="" class="col s8">
-                            <div class="input-field"><input class="validate" type="text" placeholder="Digite sua busca aqui.."></div>
-                            <button class="btn" type="submit">Buscar</button>
-                        </form>
-
-                        <div class="links col s4">
-                            <a href="javascript:void(0)" class="top-link modal-trigger" title="Entre ou Cadastre-se" data-target="modalLogin">Entre ou Cadastre-se</a>
-                            <a href="#" class="top-link" title="Ver Meus Pedidos">Meus Pedidos</a>
-                        </div>
+                <nav id="nav-top" class="nav-wrapper row">
+                    <div id="menu-trigger" class="order-1 d-lg-none">
+                        <div class="menu-icon" data-toggle></div>
                     </div>
 
-                    <div id="cart" class="dropdown-trigger col right" data-target="cart-preview">
-                        <a href="#" title="Carrinho" data-toggle="dropdown" class="cart-link">
-                            <div class="cart-total left"><span id="qtd-itens">0</span> item(s) - R$ <span id="valor-total">0</span></div>
-                            <span class="shopping-cart left"></span>
+                    <a href="#" title="Página Inicial" class="logo left col s2"></a>
+
+                    <form id="main-search" action="form-inline" class="col s4">
+                        <input class="form-control" type="text" placeholder="Digite sua busca aqui.." aria-label="Buscar">
+                        <button class="btn" type="submit">Buscar</button>
+                    </form>
+
+                    <div class="links col s3">
+                        <a href="javascript:void(0)" class="top-link" title="Fazer Login" data-toggle="modal" data-target="#modalLogin">Fazer <br/>Login</a>
+                        <a href="#" class="top-link" title="Ver Meus Pedidos">Meus Pedidos</a>
+                    </div>
+
+                    <div id="cart" class="col right" >
+                        <a href="javascript:void(0)" title="Carrinho" class="cart-link dropdown-trigger" data-target='cart-preview'>
+                            <div class="cart-total align-self-center"><span id="qtd-itens">0</span> item(s)</div>
+                            <i class="shopping-cart"></i>
                         </a>
 
-                        <div id="cart-preview" class="dropdown-menu">
+                        <div id="cart-preview" class="dropdown-content">
                             <div class="cart-overflow">
                             <table class="table">
                                 <tbody>
@@ -43,9 +45,9 @@
                             </table>
                             </div>
 
-                            <div id="preview-rdp" class="">
-                                <a href="#" class="btn btn-secondary bt-vercart left" title="Ver Carrinho">Ver Carrinho</a>
-                                <a href="#" class="btn btn-primary bt-checkout right" title="Finalizar Compras">Finalizar a compra</a>
+                            <div id="preview-rdp" class="d-flex justify-content-between">
+                                <a href="#" class="btn btn-secondary bt-vercart" title="Ver Carrinho">Ver Carrinho</a>
+                                <a href="#" class="btn btn-primary bt-checkout" title="Finalizar Compras">Finalizar a compra</a>
                             </div> 
                         </div>
                     </div>
@@ -54,8 +56,8 @@
 
             <div id="menu">
                 <div class="container">
-                    <nav class="navigation nav-extended">
-                        <ul class="nav  justify-content-between">
+                    <nav class="navigation">
+                        <ul class="nav d-flex justify-content-between">
                             <li class="nav-item dropdown has-container">
                                 <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Compre por categoria</a>
                                 <ul id="drop-nvl1" class="dropdown-menu">
@@ -67,7 +69,7 @@
                                                 <div class="col-lg-6">
                                                     <h2 class="cat-tit">Celulares</h2>
                                                     <div class="row">
-                                                        <div class="col s6">
+                                                        <div class="col-sm-6">
                                                             <div class="padd">
                                                             <strong>Marcas em destaque</strong>
                                                             <ul class="list-unstyled">
@@ -79,7 +81,7 @@
                                                             </ul>
                                                             </div>
                                                         </div>
-                                                        <div class="col s6">
+                                                        <div class="col-sm-6">
                                                             <div class="padd">
                                                             <strong>Modelos mais buscados</strong>
                                                             <ul class="list-unstyled">
@@ -92,7 +94,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6 d-md-none d-lg-block"><a href="" title="Banner em destaque"><img src="images/prod-banner.png" alt="" class="img-fluid"></a></div>
+                                                <div id="banner-menu" class="col-lg-6 d-md-none d-lg-block"><a href="" title="Banner em destaque"><img src="images/prod-banner.png" alt="" class="img-fluid"></a></div>
                                             </div>
                                         </div>
                                     </li>
@@ -121,73 +123,47 @@
     </header>
     
 
-    <div id="modalLogin" class="modal" >
-        <div class="modal-bg">
+    <div id="modalLogin" class="modal fade"  tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">  
 
-        <button type="button" class="modal-close">X</button>    
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>    
 
-        <div class="row">
 
-        <div class="col s6 padd border-divisor">
-        <h2 class="modal-title center">Já é cadastrado?</h2>
-        <p class="center text-muted">Então entre com seus dados de login e senha.</p>
+        <div class="padd">
+        <h2 class="modal-title text-center">Já é cadastrado?</h2>
+        <p class="text-center text-muted">Então entre com seus dados de login e senha.</p>
 
         <form action="" class="row">
-            <div class="form-group col s12">
+            <div class="form-group col-sm-12">
                 <label for="inptNome">Nome:</label>
                 <input type="text" id="inptNome" placeholder="Digite seu nome" class="form-control">
             </div>
 
-            <div class="form-group col s6">
+            <div class="form-group col-sm-12">
                 <label for="inptEmail">E-mail</label>
-                <input type="email" id="inptEmail1" placeholder="Digite seu email" class="form-control">
+                <input type="email" id="inptEmail" aria-describedby="emailHelp" placeholder="Digite seu email" class="form-control">
             </div>
 
-            <div class="form-group col s12"><a href="#" title="Alterar senha">Esqueci minha senha</a></div>
+            <div class="form-group col-sm-12"><a href="#" title="Alterar senha">Esqueci minha senha</a></div>
 
-            <div class="col s12"><button type="submit" class="btn btn-primary">Acessar</button></div>
+            <div class="col-sm-12"><button type="submit" class="btn btn-primary">Acessar</button></div>
         </form>
-        </div>
-
-        <div class="col s6 padd">
-        <h2 class="modal-title center">Ainda não é cadastrado no site?</h2>
-        <p class="center text-muted">Faça agora mesmo o seu cadastro, é simples e rápido!</p>
-
-        <form action="" class="row">
-            <div class="form-group col s12">
-                <label for="inptEmail">E-mail</label>
-                <input type="email" id="inptEmail2" placeholder="Digite seu email" class="form-control">
-            </div>
-
-            <div class="form-group col s6">
-                <label for="inptSenha">Crie sua senha:</label>
-                <input type="password" id="inptSenha" placeholder="Digite a senha" class="form-control">
-            </div>
-
-            <div class="form-group col s6">
-                <label for="inptSenhaCheck">Confirme sua senha:</label>
-                <input type="password" id="inptSenhaCheck" placeholder="Digite a senha" class="form-control">
-            </div>
-
-            <div class="form-group col s6">
-                <label for="inptCpf">CPF/CNPJ:</label>
-                <input type="text" id="inptCpf" placeholder="Digite seu cpf/cnpj" class="form-control">
-            </div>
-
-            <div class="col s12"><button type="submit" class="btn btn-primary">Cadastrar</button></div>
-        </form>
-        </div>
-
         </div>
 
         </div>
         </div>
     </div>
 
-    <!-- <div id="modalNotification" class="modal" >
+    <div id="modalNotification" class="modal"  tabindex="-1" role="dialog">
         <div class="modal-dialog">
         <div class="modal-content">   
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button> 
 
         <table class="table">
             <tbody>
@@ -198,14 +174,14 @@
             </tbody>
         </table>
 
-        <div id="preview-rdp" class=" justify-content-between">
+        <div id="preview-rdp" class="d-flex justify-content-between">
             <a href="#" class="btn bt-vercart" title="Ver Carrinho">Ver Carrinho</a>
             <a href="#" class="btn btn-primary bt-checkout" title="Finalizar Compras">Finalizar</a>
         </div> 
 
         </div>
         </div>
-    </div> -->
+    </div>
         
     <section class="banner">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -231,11 +207,11 @@
 
     <section class="produtos">
         <div class="container">
-        <h2 class="sec-tit center">Produtos mais procurados</h2>
+        <h2 class="sec-tit text-center">Produtos mais procurados</h2>
         <div class="prod-list row">
             <div class="col s6 xl3 prod-item">
                 <div data-id="prod-1" class="card">
-                    <a href="" title="Smartphone Modelo X" class="card-img"><img src="images/prod-thumb.png" alt="" class="card-img-top" data-img="images/prod-thumb.png"></a>
+                    <a href="" title="Smartphone Modelo X" class="card-image"><img src="images/prod-thumb.png" alt=""></a>
                     <div class="card-body">
                         <div class="card-reviews">
                             <span class="icon-star star-f">&#9733</span>    
@@ -260,7 +236,7 @@
 
             <div class="col s6 xl3 prod-item">
                 <div data-id="prod-2" class="card">
-                    <a href="" title="Smartphone Modelo X"><img src="images/prod-thumb2.png" alt="" class="card-img-top" data-img="images/prod-thumb2.png"></a>
+                    <a href="" title="Monitor 19 polegadas" class="card-image"><img src="images/prod-thumb2.png" alt=""></a>
                     <div class="card-body">
                         <div class="card-reviews">
                             <span class="icon-star star-f">&#9733</span>    
@@ -285,7 +261,7 @@
 
             <div class="col s6 xl3 prod-item">
                 <div data-id="prod-3" class="card">
-                    <a href="" title="Subwoofer 5.0"><img src="images/prod-thumb3.png" alt="" class="card-img-top" data-img="images/prod-thumb3.png"></a>
+                    <a href="" title="Subwoofer 5.0" class="card-image"><img src="images/prod-thumb3.png" alt=""></a>
                     <div class="card-body">
                         <div class="card-reviews">
                             <span class="icon-star star-f">&#9733</span>    
@@ -310,7 +286,7 @@
 
             <div class="col s6 xl3 prod-item">
                 <div data-id="prod-4" class="card">
-                    <a href="" title="Smartphone Modelo X"><img src="images/prod-thumb4.png" alt="" class="card-img-top" data-img="images/prod-thumb4.png"></a>
+                    <a href="" title="Notebook Dual Core" class="card-image"><img src="images/prod-thumb4.png" alt=""></a>
                     <div class="card-body">
                         <div class="card-reviews">
                             <span class="icon-star star-f">&#9733</span>    
@@ -334,7 +310,7 @@
             </div>
         </div>
         </div>
-    </section> 
+    </section>     
 
 
 
