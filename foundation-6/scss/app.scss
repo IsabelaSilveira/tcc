@@ -4,7 +4,7 @@
 @import 'foundation'; 
 @import 'motion-ui';
 
-  
+   
 
 // Global styles
 @include foundation-global-styles;  
@@ -44,8 +44,8 @@
 // Menu-based containers
 @include foundation-menu;
 @include foundation-menu-icon;
-@include foundation-accordion-menu;
-@include foundation-drilldown-menu;
+// @include foundation-accordion-menu;
+// @include foundation-drilldown-menu;
 @include foundation-dropdown-menu;
 
 // Layout components

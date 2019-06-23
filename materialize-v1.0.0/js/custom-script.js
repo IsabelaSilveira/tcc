@@ -1,6 +1,7 @@
 jQuery('document').ready(function(){
 
     $('.dropdown-trigger').dropdown();
+    $('.modal').modal();
     
     jQuery('.dropdown-submenu > a').on("click", function(e) {
         var submenu = jQuery(this);
@@ -37,14 +38,14 @@ jQuery('document').ready(function(){
         prod_id = $(this).parents('.card').attr('data-id'); 
         prod_qtd = $(this).parents('.card').find('.prod-qtd').val(); 
         prod_name = $(this).parents('.card').find('.card-title').attr('data-name'); 
-        prod_thumb = $(this).parents('.card').find('.card-img-top').attr('data-img'); 
+        prod_thumb = $(this).parents('.card').find('.card-image > img').attr('data-img'); 
         prod_price = $(this).parents('.card').find('.card-price').attr('data-price'); 
         price_new = prod_price.replace(/\,00$/,'');  
 
         $('#cart-empty').remove();
         prod_item = 
         '<tr id="'+prod_id+'" class="no-gutters prod-preview">'+
-            '<td class="column-thumb"><img src="'+prod_thumb+'" alt="Miniatura do produto" class="img-fluid"></td>'+
+            '<td class="column-thumb"><img src="'+prod_thumb+'" alt="Miniatura do produto" class="responsive-img"></td>'+
             '<td class="text-left column-preview"><a href="#" title="'+prod_name+'" class="preview-link">'+prod_name+'</a></td>'+
             '<td class="text-center column-qtd">'+prod_qtd+'</td>'+
             '<td class="text-center column-price" data-price="'+price_new+'">R$ '+prod_price+'</td>'+
