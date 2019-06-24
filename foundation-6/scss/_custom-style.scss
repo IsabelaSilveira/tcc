@@ -457,7 +457,7 @@ $btn-cat: 265px;
 }
 .prod-qtd{
     @extend .form-input;
-    width: auto;
+    width: 50px;
     text-align: center;
     margin: 0 20px 0 0;
 }
